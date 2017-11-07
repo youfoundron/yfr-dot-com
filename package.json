@@ -1,0 +1,42 @@
+{
+  "name": "yfr-dot-com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "GPL-3.0",
+  "scripts": {
+    "dev": "gatsby develop -p 3000 -o",
+    "build": "gatsby build",
+    "deploy": "",
+    "lint": "standard | snazzy"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "pre-commit": "^1.2.2",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.6",
+    "gatsby": "^1.9.100",
+    "gatsby-link": "^1.6.24",
+    "gatsby-plugin-google-analytics": "^1.0.11",
+    "gatsby-plugin-postcss-sass": "^1.0.12",
+    "gatsby-plugin-purify-css": "^2.2.1",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-sitemap": "^1.2.5",
+    "hamburgers": "^0.9.1",
+    "postcss-import": "^11.0.0",
+    "postcss-simple-vars": "^4.1.0",
+    "prop-types": "^15.6.0",
+    "react-helmet": "^5.2.0",
+    "react-perfect-scrollbar": "^0.2.3",
+    "react-transition-group": "^2.2.1",
+    "tachyons": "^4.9.0"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
