@@ -5,5 +5,7 @@
 @import 'react-perfect-scrollbar/dist/css/styles.css';
 
 /* hamburgers */
-@import './_hamburgers-settings.scss';
-@import 'hamburgers/dist/hamburgers.css';
+@import 'hamburgers/index.scss';
+
+/* normalizations */
+.link:focus { outline: 0; }
