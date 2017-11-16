@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 // import favicon from './img/favicon.png'
 // import shareMeta from './content/share-meta'
 
@@ -10,6 +9,7 @@ if (process.env.NODE_NEV === 'production') {
   } catch (e) {
     console.log(e)
   }
+}
 
 const Html = ({ headComponents, body, postBodyComponents }) => (
   <html>
