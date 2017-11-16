@@ -3,6 +3,8 @@ import React from 'react'
 const Hamburger = ({ open, ...props }) => (
   <button
     className={`
+      mr3
+      outline-0
       hamburger hamburger--squeeze
       ${open ? 'is-active' : ''}
     `}

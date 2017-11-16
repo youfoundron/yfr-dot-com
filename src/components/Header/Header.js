@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-// import { withState } from 'recompose'
 
 import Nav from './Nav'
+import MobileNav from './MobileNav'
 import Hamburger from './Hamburger'
+import Container from '../Container'
 
 class Header extends Component {
   state = { open: false }
@@ -21,18 +22,18 @@ class Header extends Component {
     const { open } = this.state
 
     return (
-      <header className='bg-near-black flex-column fixed absolute w-100 shadow-3'>
-        <div className='flex flex-row wrap pa3 ph5-m justify-between items-center'>
-          <div className='flex-auto w-third dn-ns'  />
+      <header className='bg-near-black flex-column w-100 shadow-3 relative overflow-y-hidden'>
+        <Container className='flex flex-row wrap justify-start items-center pv3'>
+          <div className='flex-auto w-third dn-ns' />
           <div className='flex-auto w-third tc tl-ns'>
-            <Link to='/' className='link white hover-gold f3 ttu tracked b'>Home</Link>
+            <Link to='/' onClick={this.closeNav} className='link near-white hover-gold f3 ttu tracked b'>Home</Link>
           </div>
-          <div className='flex-auto w-third dn-ns tr relative'>
+          <div className='flex-auto w-third dn-ns relative tr pr3'>
             <Hamburger open={open} onClick={this.toggleNav} />
           </div>
           <Nav className='dn flex-ns flex-row' />
-        </div>
-        { open && <Nav className='flex dn-ns flex-column'/> }
+        </Container>
+        <MobileNav open={open} onNavigate={this.closeNav} />
       </header>
     )
   }

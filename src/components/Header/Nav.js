@@ -1,27 +1,33 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+const paths = [
+  'work',
+  'blog',
+  'contact'
+]
+
 const navLinkClass = `
   flex-auto link
   near-white hover-gold b
   tc ttu tracked
   f3 f5-ns
-  pv3
-  ml4-ns
+  pv3 ml4-ns
   b--dark-gray bt b--none-ns
 `
 
-const Nav = props => (
+const Nav = ({ onNavigate, ...props }) => (
   <nav {...props}>
-    <Link to='/work' className={navLinkClass}>
-      Work
-    </Link>
-    <Link to='/blog' className={navLinkClass}>
-      Blog
-    </Link>
-    <Link to='/contact' className={navLinkClass}>
-      Contact
-    </Link>
+    {paths.map(path => (
+      <Link
+        key={path}
+        to={`/${path}`}
+        onClick={onNavigate}
+        className={navLinkClass}
+      >
+        {path}
+      </Link>
+    ))}
   </nav>
 )
 
