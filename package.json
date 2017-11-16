@@ -24,7 +24,6 @@
     "gatsby-plugin-purify-css": "^2.2.1",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sitemap": "^1.2.5",
-    "hamburgers": "^0.9.1",
     "postcss-import": "^11.0.0",
     "postcss-simple-vars": "^4.1.0",
     "prop-types": "^15.6.0",
