@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.youfoundron.com'
@@ -6,18 +8,17 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-purify-css',
     'gatsby-plugin-react-helmet',
-    // {
-    //   resolve: 'gatsby-source-buttercms',
-    //   options: {
-    //     authToken: 'fac8fdb770c99d13328431879db922ea3efc57db',
-    //     contentFields: {
-    //
-    //     }
-    //   }
-    // },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: { trackingId: 'UA-52765720-1' }
+    },
+    {
+      resolve: 'gatsby-source-buttercms-blog',
+      options: {
+        authToken: 'fac8fdb770c99d13328431879db922ea3efc57db',
+        templatePath: path.resolve('./src/templates/post.js'),
+        listArgs: { page_size: 999 }
+      }
     },
     {
       resolve: 'gatsby-plugin-postcss-sass',
