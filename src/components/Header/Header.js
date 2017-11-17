@@ -28,7 +28,7 @@ class Header extends Component {
           <div className='flex-auto w-third dn-ns' />
           <div className='flex-auto w-third tc tl-ns'>
             <Link to='/' onClick={this.closeNav} className='link near-white hover-gold f3 ttu tracked b'>
-              <img style={{width: '2.5rem', height: '2.5rem'}} src={ZapSVG} />
+              <img className='v-mid dib m-auto' style={{width: '2.5rem', height: '2.5rem'}} src={ZapSVG} />
             </Link>
           </div>
           <div className='flex-auto w-third dn-ns relative tr pr3'>
