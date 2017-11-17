@@ -22,7 +22,7 @@ class Header extends Component {
     const { open } = this.state
 
     return (
-      <header className='bg-near-black flex-column w-100 shadow-3 overflow-y-hidden'>
+      <header className='bg-near-black flex-column w-100 shadow-3-ns overflow-y-hidden'>
         <Container className='flex flex-row wrap justify-start items-center pv3 bg-inherit relative z-1'>
           <div className='flex-auto w-third dn-ns' />
           <div className='flex-auto w-third tc tl-ns'>
@@ -33,6 +33,12 @@ class Header extends Component {
           </div>
           <Nav className='dn flex-ns flex-row' />
         </Container>
+        { open &&
+          <div
+            onClick={this.closeNav}
+            className='db w-100 h-100 top-0 left-0 absolute'
+          />
+        }
         <MobileNav open={open} onNavigate={this.closeNav} />
       </header>
     )

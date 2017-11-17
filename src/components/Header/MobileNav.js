@@ -5,13 +5,10 @@ import Nav from './Nav'
 
 const MobileNav = ({ open, ...props }) => (
   <Motion
-    style={{
-      offsetY: spring(open ? 0 : -100),
-      pointerEvents: open ? 'all' : 'none'
-    }}
-  >{({ opacity, offsetY, pointerEvents }) => (
+    style={{ offsetY: spring(open ? 0 : -100) }}
+  >{({ offsetY }) => (
     <Nav
-      style={{ pointerEvents, transform: `translateY(${offsetY}%)` }}
+      style={{ transform: `translateY(${offsetY}%)` }}
       className='flex dn-ns flex-column w-100 absolute z-0 bg-inherit shadow-3'
       {...props}
     />
