@@ -1,5 +1,5 @@
 import React from 'react'
-// import favicon from './img/favicon.png'
+import favicon from '../static/zap-v2.png'
 // import shareMeta from './content/share-meta'
 
 let styles
@@ -16,11 +16,10 @@ const Html = ({ headComponents, body, postBodyComponents }) => (
     <head>
       <meta charSet='utf-8' />
       <meta httpEquiv='x-ua-compatible' content='ie=edge' />
-      {/* <meta name='viewport' content='width=420, initial-scale=0.76, shrink-to-fit=yes, user-scalable=no' /> */}
-      {/* <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no' /> */}
+      <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no' />
 
       {/* Fonts + Favicon */}
-      {/* <link rel='shortcut icon' type='image/png' href={favicon} /> */}
+      <link rel='shortcut icon' type='image/png' href={favicon} />
 
       {/* Put children first to establish tag precedence */}
       { headComponents }
