@@ -22,8 +22,8 @@ class Header extends Component {
     const { open } = this.state
 
     return (
-      <header className='bg-near-black flex-column w-100 shadow-3 relative overflow-y-hidden'>
-        <Container className='flex flex-row wrap justify-start items-center pv3'>
+      <header className='bg-near-black flex-column w-100 shadow-3 overflow-y-hidden'>
+        <Container className='flex flex-row wrap justify-start items-center pv3 bg-inherit relative z-1'>
           <div className='flex-auto w-third dn-ns' />
           <div className='flex-auto w-third tc tl-ns'>
             <Link to='/' onClick={this.closeNav} className='link near-white hover-gold f3 ttu tracked b'>Home</Link>
