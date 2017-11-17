@@ -30,8 +30,8 @@
     "postcss-simple-vars": "^4.1.0",
     "prop-types": "^15.6.0",
     "react-helmet": "^5.2.0",
+    "react-motion": "^0.5.2",
     "react-perfect-scrollbar": "^0.2.3",
-    "react-transition-group": "^2.2.1",
     "slash": "^1.0.0",
     "tachyons": "^4.9.0"
   },
