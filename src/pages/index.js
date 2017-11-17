@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 
 import { head } from '../content/home'
 import Head from '../components/Head'
+import Socials from '../components/Socials'
 import Container from '../components/Container'
 
 const Copy = props => (
@@ -31,6 +32,7 @@ const HomePage = () => (
       <Copy>
         If you're interested in working together, or just feel like connecting, let's <Callout to='/contact'>get in touch</Callout>.
       </Copy>
+      <Socials />
     </section>
   </Container>
 )
