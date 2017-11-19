@@ -1,7 +1,51 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
-const PostTemplate = props => {
-  return <h1>{props.data.butterPost.title}</h1>
+import monthNames from '../content/monthNames'
+import postBodyToComponent from '../util/postBodyToComponent'
+import Container from '../components/Container'
+
+const PostTemplate = ({data: {butterPost: post}}) => {
+  const datetime = new Date(post.published)
+  const DD = datetime.getDate()
+  const MMMM = monthNames[datetime.getMonth()]
+  const YYYY = datetime.getFullYear()
+  return (
+    <article>
+      <Helmet>
+        <title>{post.seo_title}</title>
+        <meta name='description' content={post.meta_description} />
+        <link ref='canonical' href={`https://youfoundron.com/blog/${post.slug}`} />
+      </Helmet>
+      <header className='bg-gold sans-serif pv4 pv5-ns'>
+        <Container>
+          <div className='mw7 center '>
+            <time className='f6 mb2 dib ttu tracked'>
+              <small>{`${DD} ${MMMM}, ${YYYY}`}</small>
+            </time>
+            <h1 className='f2 f1-m f-headline-l lh-title mv0'>
+              <span className='bg-near-black lh-copy near-white pa1 tracked-tight'>
+                {post.title}
+              </span>
+            </h1>
+            <h2 className='f4 f3-ns fw1 georgia i'>
+              {post.summary}
+            </h2>
+            <h3 className='f6 ttu tracked near-black mb0'>
+              By {post.author.first_name} {post.author.last_name}
+            </h3>
+          </div>
+        </Container>
+      </header>
+      <section className='pv3 pv4-ns'>
+        <Container>
+          <div className='bg-near-white georgia mw7 center'>
+            { postBodyToComponent(post.body) }
+          </div>
+        </Container>
+      </section>
+    </article>
+  )
 }
 
 export default PostTemplate
