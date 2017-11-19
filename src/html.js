@@ -1,6 +1,5 @@
 import React from 'react'
-import favicon from '../static/zap-v2.png'
-// import shareMeta from './content/share-meta'
+import shareMeta from './content/shareMeta'
 
 let styles
 if (process.env.NODE_NEV === 'production') {
@@ -31,14 +30,16 @@ const Html = ({ headComponents, body, postBodyComponents }) => (
       <meta property='article:author' content='Ron Gierlach' />
 
       {/* Facebook open graph meta */}
-      {/* <meta property='og:title' content={shareMeta.title} /> */}
-      {/* <meta property='og:description' content={shareMeta.description} /> */}
-      {/* <meta property='og:url' content={shareMeta.facebook.url} /> */}
-      {/* <meta property='og:image' content={shareMeta.facebook.image} /> */}
+      <meta property='og:title' content={shareMeta.title} />
+      <meta property='og:description' content={shareMeta.description} />
+      <meta property='og:url' content={shareMeta.facebook.url} />
+      <meta property='og:image' content={shareMeta.facebook.image} />
 
       {/* Twitter card meta */}
-      {/* <meta name='twitter:card' content={shareMeta.twitter.card} /> */}
-      {/* <meta name='twitter:site' content={shareMeta.twitter.site} /> */}
+      <meta name='twitter:card' content={shareMeta.twitter.card} />
+      <meta name='twitter:site' content={shareMeta.twitter.site} />
+      {/* <meta name='twitter:creator' content={shareMeta.twitter.creator} /> */}
+      <meta property='twitter:description' content={shareMeta.description} />
 
       {/* Styles */}
       { process.env.NODE_ENV === 'production'
