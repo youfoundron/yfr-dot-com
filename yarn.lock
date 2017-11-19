@@ -3462,7 +3462,7 @@ fs-exists-sync@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/fs-exists-sync/-/fs-exists-sync-0.1.0.tgz#982d6893af918e72d08dec9e8673ff2b5a8d6add"
 
-fs-extra@4.0.2, fs-extra@^4.0.1:
+fs-extra@4.0.2, fs-extra@^4.0.1, fs-extra@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-4.0.2.tgz#f91704c53d1b461f893452b0c307d9997647ab6b"
   dependencies:
@@ -3529,6 +3529,13 @@ gatsby-cli@^1.1.19:
     yargs "^8.0.2"
     yurnalist "^0.2.1"
 
+gatsby-image@^1.0.24:
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-1.0.24.tgz#f6c8bb7caa0cc9061636a246e588ec463570c7c4"
+  dependencies:
+    babel-runtime "^6.26.0"
+    prop-types "^15.6.0"
+
 gatsby-link@^1.6.24:
   version "1.6.24"
   resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.24.tgz#a1477ff7f3b55881c51a5b22baf4c5fb85cea094"
@@ -3593,6 +3600,15 @@ gatsby-react-router-scroll@^1.0.3:
     babel-runtime "^6.26.0"
     scroll-behavior "^0.9.1"
     warning "^3.0.0"
+
+gatsby-transformer-sharp@^1.6.14:
+  version "1.6.14"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-1.6.14.tgz#3c5342023fdccf799eeef45ad523cc9c53dd89aa"
+  dependencies:
+    babel-runtime "^6.26.0"
+    bluebird "^3.5.0"
+    fs-extra "^4.0.2"
+    image-size "^0.6.0"
 
 gatsby@^1.9.100:
   version "1.9.100"
@@ -4241,6 +4257,10 @@ ieee754@^1.1.4:
 ignore@^3.0.11, ignore@^3.0.9, ignore@^3.2.0:
   version "3.3.7"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.7.tgz#612289bfb3c220e186a58118618d5be8c1bab021"
+
+image-size@^0.6.0:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.6.1.tgz#98122a562d59dcc097ef1b2c8191866eb8f5d663"
 
 immutable@~3.7.6:
   version "3.7.6"
