@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+import shareMeta from '../content/shareMeta'
 import monthNames from '../content/monthNames'
 import postBodyToComponent from '../util/postBodyToComponent'
 import Container from '../components/Container'
@@ -15,6 +16,16 @@ const PostTemplate = ({data: {butterPost: post}}) => {
       <Helmet>
         <title>{post.seo_title}</title>
         <meta name='description' content={post.meta_description} />
+        {/* Facebook open graph meta */}
+        <meta property='og:title' content={post.title} />
+        <meta property='og:description' content={post.summary} />
+        <meta property='og:url' content={`https://youfoundron.com/blog/${post.slug}`} />
+        <meta property='og:image' content={post.featured_image || shareMeta.facebook.image} />
+        {/* Twitter card meta */}
+        <meta property='twitter:card' content={post.featured_image ? 'summary_large_image' : 'summary'} />
+        <meta property='twitter:site' content={shareMeta.twitter.site} />
+        <meta property='twitter:creator' content={post.author.twitter_handle || shareMeta.twitter.site} />
+        <meta property='twitter:description' content={post.summary} />
         <link ref='canonical' href={`https://youfoundron.com/blog/${post.slug}`} />
       </Helmet>
       <header className='bg-gold sans-serif pv4 pv5-ns'>
@@ -73,6 +84,7 @@ export const pageQuery = graphql`
       author {
         first_name
         last_name
+        twitter_handle
       }
     }
   }
