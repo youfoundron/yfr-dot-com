@@ -17,13 +17,29 @@ const Html = ({ headComponents, body, postBodyComponents }) => (
       <meta httpEquiv='x-ua-compatible' content='ie=edge' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no' />
 
-      {/* Fonts + Favicon */}
-      <link rel='shortcut icon' type='image/png' href={favicon} />
+      {/* Fonts + Favicons */}
+      <link rel='apple-touch-icon' sizes='57x57' href={require('./content/favicons/apple-icon-57x57.png')} />
+      <link rel='apple-touch-icon' sizes='60x60' href={require('./content/favicons/apple-icon-60x60.png')} />
+      <link rel='apple-touch-icon' sizes='72x72' href={require('./content/favicons/apple-icon-72x72.png')} />
+      <link rel='apple-touch-icon' sizes='76x76' href={require('./content/favicons/apple-icon-76x76.png')} />
+      <link rel='apple-touch-icon' sizes='114x114' href={require('./content/favicons/apple-icon-114x114.png')} />
+      <link rel='apple-touch-icon' sizes='120x120' href={require('./content/favicons/apple-icon-120x120.png')} />
+      <link rel='apple-touch-icon' sizes='144x144' href={require('./content/favicons/apple-icon-144x144.png')} />
+      <link rel='apple-touch-icon' sizes='152x152' href={require('./content/favicons/apple-icon-152x152.png')} />
+      <link rel='apple-touch-icon' sizes='180x180' href={require('./content/favicons/apple-icon-180x180.png')} />
+      <link rel='icon' type='image/png' sizes='192x192' href={require('./content/favicons/android-icon-192x192.png')} />
+      <link rel='icon' type='image/png' sizes='32x32' href={require('./content/favicons/favicon-32x32.png')} />
+      <link rel='icon' type='image/png' sizes='96x96' href={require('./content/favicons/favicon-96x96.png')} />
+      <link rel='icon' type='image/png' sizes='16x16' href={require('./content/favicons/favicon-16x16.png')} />
+      <meta name='msapplication-TileColor' content='#ffffff' />
+      <meta name='msapplication-TileImage' content={require('./content/favicons/ms-icon-144x144.png')} />
+      <meta name='theme-color' content='#ffffff' />
 
       {/* Put children first to establish tag precedence */}
       { headComponents }
 
       <title>You Found Ron</title>
+      <meta name='description' content={shareMeta.description} />
 
       <meta property='og:type' content='website' />
       <meta property='og:locale' content='en_US' />
@@ -36,9 +52,9 @@ const Html = ({ headComponents, body, postBodyComponents }) => (
       <meta property='og:image' content={shareMeta.facebook.image} />
 
       {/* Twitter card meta */}
-      <meta name='twitter:card' content={shareMeta.twitter.card} />
-      <meta name='twitter:site' content={shareMeta.twitter.site} />
-      {/* <meta name='twitter:creator' content={shareMeta.twitter.creator} /> */}
+      <meta property='twitter:card' content={shareMeta.twitter.card} />
+      <meta property='twitter:site' content={shareMeta.twitter.site} />
+      {/* <meta property='twitter:creator' content={shareMeta.twitter.creator} /> */}
       <meta property='twitter:description' content={shareMeta.description} />
 
       {/* Styles */}
