@@ -1,8 +1,9 @@
 const path = require('path')
 
 module.exports = {
+  pathPrefix: '/',
   siteMetadata: {
-    siteUrl: 'https://www.youfoundron.com'
+    siteUrl: 'https://youfoundron.com'
   },
   plugins: [
     'gatsby-plugin-sitemap',
