@@ -2,13 +2,9 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 import { head } from '../content/blog'
+import monthNames from '../content/monthNames'
 import Head from '../components/Head'
 import Container from '../components/Container'
-
-const monthNames = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December'
-]
 
 const BlogPage = ({data: {allButterPost: {edges}}}) => (
   <Container>
