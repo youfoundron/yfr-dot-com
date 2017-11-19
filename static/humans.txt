@@ -1,0 +1,20 @@
+/* TEAM */
+  Developer: Ron Gierlach
+  Contact: rongierlach [at] gmail.com
+  Twitter: @youfoundron
+  From: Chicago, IL, USA
+
+/* THANKS */
+  JS Framework: Gatsby
+  Twitter: @gatsbyjs
+
+  CSS Framework: Tachyons
+  Twitter: @tachyons_css
+
+  CMS: ButterCMS
+  Twitter: @buttercms
+
+/* SITE */
+  Language: English
+  Doctype: HTML5
+  IDE: Atom
