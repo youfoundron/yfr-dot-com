@@ -5,7 +5,7 @@ export default {
       { name: 'description', content: 'This is a website.' }
     ],
     links: [
-
+      { rel: 'canonical', href: 'https://youfoundron.com' }
     ]
   }
 }
