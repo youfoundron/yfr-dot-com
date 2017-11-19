@@ -5,7 +5,7 @@ import Nav from './Nav'
 import MobileNav from './MobileNav'
 import Hamburger from './Hamburger'
 import Container from '../Container'
-import ZapSVG from '../../../static/zap-v2.svg'
+import ZapSVG from '../../content/images/zap-v2.svg'
 
 class Header extends Component {
   state = { open: false }
