@@ -6,13 +6,15 @@ module.exports = {
     siteUrl: 'https://youfoundron.com'
   },
   plugins: [
+    // analytics & SEO
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-purify-css',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: { trackingId: 'UA-52765720-1' }
     },
+
+    // source blog posts
     {
       resolve: 'gatsby-source-buttercms-blog',
       options: {
@@ -21,6 +23,20 @@ module.exports = {
         listArgs: { page_size: 999 }
       }
     },
+
+    // image optimization
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/content/images`
+      }
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+
+    // style optimization
+    'gatsby-plugin-purify-css',
     {
       resolve: 'gatsby-plugin-postcss-sass',
       options: {
