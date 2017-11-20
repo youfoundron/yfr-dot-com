@@ -9,7 +9,7 @@ const MobileNav = ({ open, ...props }) => (
   >{({ offsetY }) => (
     <Nav
       style={{ transform: `translateY(${offsetY}%)` }}
-      className='flex dn-ns flex-column w-100 absolute z-0 bg-inherit shadow-3'
+      className='flex dn-ns flex-column w-100 absolute z-1 bg-inherit shadow-3'
       {...props}
     />
   )}</Motion>

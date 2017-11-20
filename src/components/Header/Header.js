@@ -24,7 +24,7 @@ class Header extends Component {
 
     return (
       <header className='bg-near-black flex-column w-100 shadow-3-ns overflow-y-hidden'>
-        <Container className='flex flex-row wrap justify-start items-center pv3 bg-inherit relative z-1'>
+        <Container className='flex flex-row wrap justify-start items-center pv3 bg-inherit relative z-2'>
           <div className='flex-auto w-third dn-ns' />
           <div className='flex-auto w-third tc tl-ns'>
             <Link to='/' onClick={this.closeNav} className='link near-white hover-gold f3 ttu tracked b'>
