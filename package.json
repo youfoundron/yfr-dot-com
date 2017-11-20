@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "gatsby develop -p 3000 -o",
     "build": "gatsby build",
-    "deploy": "",
+    "publish": "node publish.js",
+    "deploy": "npm run build && npm run publish",
     "lint": "standard | snazzy"
   },
   "devDependencies": {
@@ -30,6 +31,7 @@
     "gatsby-plugin-sitemap": "^1.2.5",
     "gatsby-source-filesystem": "^1.5.8",
     "gatsby-transformer-sharp": "^1.6.14",
+    "gh-pages": "^1.1.0",
     "html-to-react": "^1.3.1",
     "postcss-import": "^11.0.0",
     "postcss-simple-vars": "^4.1.0",
