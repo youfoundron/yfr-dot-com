@@ -31,9 +31,9 @@ const Html = ({ headComponents, body, postBodyComponents }) => (
       <link rel='icon' type='image/png' sizes='32x32' href={require('./content/favicons/favicon-32x32.png')} />
       <link rel='icon' type='image/png' sizes='96x96' href={require('./content/favicons/favicon-96x96.png')} />
       <link rel='icon' type='image/png' sizes='16x16' href={require('./content/favicons/favicon-16x16.png')} />
-      <meta name='msapplication-TileColor' content='#ffffff' />
+      <meta name='msapplication-TileColor' content='#f4f4f4' />
       <meta name='msapplication-TileImage' content={require('./content/favicons/ms-icon-144x144.png')} />
-      <meta name='theme-color' content='#ffffff' />
+      <meta name='theme-color' content='#f4f4f4' />
 
       {/* Put children first to establish tag precedence */}
       { headComponents }
