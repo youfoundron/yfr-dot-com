@@ -4,24 +4,27 @@ import { head, body } from '../content/work'
 import Head from '../components/Head'
 import Container from '../components/Container'
 import Project from '../components/Project'
+import FadeInUp from '../components/FadeInUp'
 
 const WorkPage = ({ data }) => (
   <Container>
     <Head {...head} />
-    <section className='pv5 georgia mw7 center'>
-      <h1 className='sans-serif'>Work</h1>
-      <hr />
-      <ol className='list pl0'>
-        {body.projects.map(({key, ...props}, i) => (
-          <Project
-            key={key}
-            index={i}
-            sizes={data[key].sizes}
-            {...props}
-          />
-        ))}
-      </ol>
-    </section>
+    <FadeInUp>
+      <section className='pv5 georgia mw7 center'>
+        <h1 className='sans-serif'>Work</h1>
+        <hr />
+        <ol className='list pl0'>
+          {body.projects.map(({key, ...props}, i) => (
+            <Project
+              key={key}
+              index={i}
+              sizes={data[key].sizes}
+              {...props}
+            />
+          ))}
+        </ol>
+      </section>
+    </FadeInUp>
   </Container>
 )
 

@@ -5,6 +5,7 @@ import shareMeta from '../content/shareMeta'
 import monthNames from '../content/monthNames'
 import postBodyToComponent from '../util/postBodyToComponent'
 import Container from '../components/Container'
+import FadeInUp from '../components/FadeInUp'
 
 const PostTemplate = ({data: {butterPost: post}}) => {
   const datetime = new Date(post.published)
@@ -48,13 +49,15 @@ const PostTemplate = ({data: {butterPost: post}}) => {
           </div>
         </Container>
       </header>
-      <section className='pv3 pv4-ns'>
-        <Container>
-          <div className='bg-near-white georgia mw7 center'>
-            { postBodyToComponent(post.body) }
-          </div>
-        </Container>
-      </section>
+      <FadeInUp>
+        <section className='pv3 pv4-ns'>
+          <Container>
+            <div className='bg-near-white georgia mw7 center'>
+              { postBodyToComponent(post.body) }
+            </div>
+          </Container>
+        </section>
+      </FadeInUp>
     </article>
   )
 }
