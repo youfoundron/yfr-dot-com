@@ -25,7 +25,7 @@ class ContactForm extends Component {
     return (
       <form
         method='POST'
-        action='http://formspree.io/rongierlach@gmail.com'
+        action='https://formspree.io/rongierlach@gmail.com'
         onSubmit={this.handleSubmit}
       >
         <label className='f6 b db mb2'>
