@@ -33,6 +33,7 @@ module.exports = async (
             author {
               first_name
               last_name
+              twitter_handle
             }
           }
         }
