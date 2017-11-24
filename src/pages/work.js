@@ -34,29 +34,19 @@ export default WorkPage
 export const pageQuery = graphql`
   query ResolutionsQuery {
     icostats: imageSharp(id: { regex: "/icostats/" }) {
-      sizes(maxWidth: 447) {
-        ...GatsbyImageSharpSizes
-      }
+      sizes(maxWidth: 447) { ...GatsbyImageSharpSizes }
     }
     porsche: imageSharp(id: { regex: "/porsche/" }) {
-      sizes(maxWidth: 447) {
-        ...GatsbyImageSharpSizes
-      }
+      sizes(maxWidth: 447) { ...GatsbyImageSharpSizes }
     }
     sonos: imageSharp(id: { regex: "/sonos/" }) {
-      sizes(maxWidth: 447) {
-        ...GatsbyImageSharpSizes
-      }
+      sizes(maxWidth: 447) { ...GatsbyImageSharpSizes }
     }
     nike: imageSharp(id: { regex: "/nike/" }) {
-      sizes(maxWidth: 447) {
-        ...GatsbyImageSharpSizes
-      }
+      sizes(maxWidth: 447) { ...GatsbyImageSharpSizes }
     }
     modestmouse: imageSharp(id: { regex: "/modestmouse/" }) {
-      sizes(maxWidth: 447) {
-        ...GatsbyImageSharpSizes
-      }
+      sizes(maxWidth: 447) { ...GatsbyImageSharpSizes }
     }
   }
 `
