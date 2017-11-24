@@ -8,6 +8,7 @@
     "dev": "gatsby develop -p 3000",
     "clean": "rimraf public/**",
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "publish": "node publish.js",
     "deploy": "npm run clean && npm run build && npm run publish"
   },
@@ -22,7 +23,7 @@
     "autoprefixer": "^7.1.6",
     "bluebird": "^3.5.1",
     "buttercms": "^1.1.0",
-    "gatsby": "^1.9.119",
+    "gatsby": "1.9.100",
     "gatsby-image": "^1.0.24",
     "gatsby-link": "^1.6.24",
     "gatsby-plugin-google-analytics": "^1.0.11",
