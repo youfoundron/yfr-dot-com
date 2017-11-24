@@ -4,15 +4,17 @@
   "main": "index.js",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "gatsby develop -p 3000 -o",
+    "lint": "standard | snazzy",
+    "dev": "gatsby develop -p 3000",
+    "clean": "rimraf public/**",
     "build": "gatsby build",
     "publish": "node publish.js",
-    "deploy": "npm run build && npm run publish",
-    "lint": "standard | snazzy"
+    "deploy": "npm run clean && npm run build && npm run publish"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
     "pre-commit": "^1.2.2",
+    "rimraf": "^2.6.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3"
   },
