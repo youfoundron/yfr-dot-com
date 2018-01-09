@@ -23,7 +23,7 @@ const HomePage = () => (
         <h1 className='sans-serif'>Found Me.</h1>
         <hr />
         <Copy>
-          I'm a Chicago based software developer, currently writing web apps and smart contracts on Ethereum.
+          I'm a <strike className='strike'>Chicago</strike> San Francisco based software developer, currently writing web apps and smart contracts at <a className='sans-serif link fw9 black hover-gold' href='https://www.tokensoft.io/' target='_blank'>TokenSoft</a>.
         </Copy>
         <Copy>
           I've done varied <Callout to='/work'>work</Callout> for some pretty interesting clients.
